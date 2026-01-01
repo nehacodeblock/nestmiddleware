@@ -10,6 +10,7 @@ import {
   userAgentMiddleware,
   UserAgentOptions,
 } from 'src/middleware/user-agent.middleware';
+import { AuthMiddleWare } from 'src/middleware/auth.middleware';
 
 @Module({
   controllers: [JobController],
@@ -17,7 +18,7 @@ import {
     {
       provide: UserAgentOptions,
       useValue: {
-        accepted: ['chrome', 'firefox'],
+        accepted: ['chrome', 'firefox', 'postman'],
       },
     },
   ],
